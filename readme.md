@@ -5,7 +5,7 @@ Write various algorithms, implmenting various swift's features such as Enum, Clo
 
 ## Checklist
 
-- [ ] **1.** Enum 
+- [X] **1.** Enum 
 - [ ] **2.** Handling Errors
 - [ ] **3.** Do Catch
 - [X] **4.** BFS, DFS on tree
