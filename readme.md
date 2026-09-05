@@ -10,6 +10,7 @@ Write various algorithms, implmenting various swift's features such as Enum, Clo
 - [ ] **3.** Do Catch
 - [X] **4.** BFS, DFS on tree
 - [X] **5.** DFS recursively
+- [X] **6.** Trailing Closure
 
 ---
 
