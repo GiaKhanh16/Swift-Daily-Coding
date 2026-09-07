@@ -34,3 +34,4 @@
       print(current?.val ?? 0)
       current = current?.next
   }
+// This code compiles but the logic is wrong

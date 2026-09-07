@@ -28,7 +28,7 @@ func traverse(root: ListNode?) {
 
 
 class LinkedList {
-
+    var array: [Int] = []
     var root: ListNode?
 
 
@@ -59,9 +59,34 @@ class LinkedList {
         var current: ListNode? = self.root
         let newNode = ListNode(val)
         while let node = current {
-            if node.next != nil {
+            if node.next == nil {
                 node.next = newNode
+                return
             }
+            current = node.next
+        }
+    }
+
+    func getValues() -> [Int] {
+        var array: [Int] = []
+        var current: ListNode? = self.root
+        while let node = current {
+            array.append(node.val)
+            current = node.next
+        }
+        return array
+    }
+
+    func delete(_ index: Int)  {
+        var indexCount: Int = 0
+        var current: ListNode? = self.root
+        while let node = current {
+            let nextIndex = indexCount + 1
+
+            if nextIndex == index {
+                node.next = current?.next?.next
+            }
+            indexCount += 1
             current = node.next
         }
     }
@@ -69,13 +94,17 @@ class LinkedList {
 
 
 var obj = LinkedList()
+
 obj.insertHead(1)
 obj.insertHead(5)
 obj.insertHead(7)
+obj.insertTail(10)
+traverse(root: obj.root)
+obj.delete(1)
 
-// obj.insertTail(5)
-
-
+// print(obj.getValues())
+// let val = obj.get(4)
+// print(val)
 
 
 // obj.insertHead(15)
